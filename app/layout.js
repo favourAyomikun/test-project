@@ -1,7 +1,7 @@
-import { Montserrat } from 'next/font/google';
+import { Instrument_Sans } from 'next/font/google';
 import "./globals.css";
 
-const montserrat = Montserrat({
+const instrument_sans = Instrument_Sans({
   subsets: ['latin'],
   weights: ['400']
 });
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} antialiased`} 
+        className={`${instrument_sans.className} antialiased`} 
       >
         {children}
       </body>
