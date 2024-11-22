@@ -57,27 +57,27 @@ const SignedInPage = () => {
                 </div>
                 <div className="max-w-2xl mx-auto">
                   <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    <button className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
+                    <button className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
                       Performance and Optimization
                     </button>
-                    <button className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
+                    <button className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
                       Visibility and Traffic
                     </button>
-                    <button className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
+                    <button className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
                       Content and Keywords
                     </button>
                   </div>
                   <div className="flex flex-wrap justify-center gap-2">
-                    <button className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
+                    <button className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
                       Quality and Usability
                     </button>
-                    <button className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
+                    <button className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
                       Backlinks
                     </button>
-                    <button className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
+                    <button className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
                       Keywords
                     </button>
-                    <button className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
+                    <button className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]">
                       Domain authority
                     </button>
                   </div>

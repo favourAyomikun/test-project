@@ -36,21 +36,21 @@ const SignedInSidebar = () => {
           <div className="space-y-2">
             <Link
               href="#"
-              className="flex items-center space-x-3 px-2 py-2 text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
+              className="flex items-center space-x-3 px-2 py-2 text-base md:text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
             >
               <PiMagicWandLight size={25} />
               <span>Dexter AI</span>
             </Link>
             <Link
               href="#"
-              className="flex items-center space-x-3 px-2 py-2 text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
+              className="flex items-center space-x-3 px-2 py-2 text-base md:text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
             >
               <IoMdAnalytics size={25} />
               <span>Analytics</span>
             </Link>
             <Link
               href="#"
-              className="flex items-center space-x-3 px-2 py-2 text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
+              className="flex items-center space-x-3 px-2 py-2 text-base md:text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
             >
               <TbPencil size={25} />
               <span>Blog post</span>
