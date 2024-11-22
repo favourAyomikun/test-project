@@ -12,7 +12,7 @@ const SignedInPage = () => {
         <SignedInSidebar />
 
         {/* Main content */}
-        <div className="flex-1 justify-center min-h-screen flex flex-col">
+        <div className="flex-1 justify-center min-h-screen flex flex-col mt-4 md:mt-0">
           {/* Header */}
           <div className="flex justify-center p-8">
             <div className="text-center">
@@ -27,7 +27,7 @@ const SignedInPage = () => {
               <p className=" text-base text-[#6B7280] tracking-wide mb-8">
                 Your personal Ai-powered SEO specialist
               </p>
-              <h1 className="text-4xl font-semibold mb-8">Welcome!</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">Welcome!</h1>
 
               {/* Search bar */}
               <div className="max-w-2xl mx-auto relative">
