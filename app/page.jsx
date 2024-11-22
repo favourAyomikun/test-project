@@ -12,7 +12,7 @@ const SignedInPage = () => {
         <SignedInSidebar />
 
         {/* Main content */}
-        <div className="flex-1 justify-center h-screen flex flex-col">
+        <div className="flex-1 justify-center min-h-screen flex flex-col">
           {/* Header */}
           <div className="flex justify-center p-8">
             <div className="text-center">
