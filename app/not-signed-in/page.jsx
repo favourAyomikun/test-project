@@ -100,7 +100,7 @@ const NotSignedInPage = () => {
         <NotSignedInSidebar />
 
         {/* Main content */}
-        <div className="flex-1 justify-center min-h-screen flex flex-col mt-20 md:mt-0">
+        <div className="flex-1 justify-center min-h-screen flex flex-col mt-10 md:mt-0">
           {/* Header */}
           <div className="flex justify-center p-8">
             <div className="text-center">
@@ -112,10 +112,10 @@ const NotSignedInPage = () => {
                   alt="main-logo"
                 />
               </div>
-              <p className="text-base text-[#6B7280] tracking-wide mb-8">
+              <p className="text-sm md:text-base text-[#6B7280] tracking-wide mb-8">
                 Your personal AI-powered SEO specialist
               </p>
-              <h1 className="text-4xl font-semibold mb-8">Good day!</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">Good day!</h1>
 
               {/* Error message */}
               {error && (
@@ -169,7 +169,7 @@ const NotSignedInPage = () => {
 
               {/* Topic buttons */}
               <div className="mt-8 text-center">
-                <div className="text-base tracking-wide text-gray-600 mb-4">
+                <div className="text-sm md:text-base tracking-wide text-gray-600 mb-4">
                   Choose a prompt below or write your own to{" "}
                   <p className="mb-4">start chatting with Dexter</p>
                   <p> Ask about:</p>
@@ -180,7 +180,7 @@ const NotSignedInPage = () => {
                       <button
                         key={index}
                         onClick={() => handleTopicClick(topic)}
-                        className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]"
+                        className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]"
                       >
                         {topic}
                       </button>
@@ -191,7 +191,7 @@ const NotSignedInPage = () => {
                       <button
                         key={index + 3}
                         onClick={() => handleTopicClick(topic)}
-                        className="px-4 py-2 text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]"
+                        className="px-4 py-2 text-sm md:text-base bg-white hover:bg-gray-200 shadow-sm rounded-[30px]"
                       >
                         {topic}
                       </button>

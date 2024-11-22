@@ -54,28 +54,28 @@ const NotSignedInSidebar = () => {
             <div className="space-y-2">
               <Link
                 href="#"
-                className="flex items-center space-x-3 px-2 py-2 text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
+                className="flex items-center space-x-3 px-2 py-2 text-base md:text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
               >
                 <PiMagicWandLight size={25} />
                 <span>Dexter AI</span>
               </Link>
               <Link
                 href="#"
-                className="flex items-center space-x-3 px-2 py-2 text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
+                className="flex items-center space-x-3 px-2 py-2 text-base md:text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
               >
                 <IoMdAnalytics size={25} />
                 <span>Analytics</span>
               </Link>
               <Link
                 href="#"
-                className="flex items-center space-x-3 px-2 py-2 text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
+                className="flex items-center space-x-3 px-2 py-2 text-base md:text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
               >
                 <TbPencil size={25} />
                 <span>Blog post</span>
               </Link>
               <Link
                 href="#"
-                className="flex items-center space-x-3 px-2 py-2 text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
+                className="flex items-center space-x-3 px-2 py-2 text-base md:text-lg text-[#344054] font-semibold hover:bg-gray-100 rounded-lg"
               >
                 <PiSignInFill size={25} />
                 <span>Sign In</span>
@@ -89,7 +89,7 @@ const NotSignedInSidebar = () => {
             </p>
             <Link
               href="#"
-              className="flex items-center justify-center font-bold px-2 py-3 tracking-wide border-[1.5px] border-[#6D68FB] text-base text-[#6D68FB] hover:bg-gray-100 rounded-[30px]"
+              className="flex items-center justify-center font-bold px-2 py-3 tracking-wide border-[1.5px] border-[#6D68FB] text-sm md:text-base text-[#6D68FB] hover:bg-gray-100 rounded-[30px]"
             >
               Sign Up
             </Link>
@@ -98,9 +98,9 @@ const NotSignedInSidebar = () => {
 
         {/* User section */}
         <div className="p-4 border-t border-[#E4E7EC] space-y-2 mb-72">
-          <p className="text-[#7A8EAC] font-bold text-base">Why My Dexter?</p>
-          <p className="text-[#7A8EAC] font-bold text-base">FAQ</p>
-          <p className="text-[#7A8EAC] font-bold text-base">Terms & Policies</p>
+          <p className="text-[#7A8EAC] font-bold text-sm md:text-base">Why My Dexter?</p>
+          <p className="text-[#7A8EAC] font-bold text-sm md:text-base">FAQ</p>
+          <p className="text-[#7A8EAC] font-bold text-sm md:text-base">Terms & Policies</p>
           <p className="text-[#7A8EAC] font-medium text-xs"> &copy; 2024 My Dexter</p>
         </div>
       </div>
