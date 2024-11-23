@@ -153,32 +153,36 @@ const NotSignedInPage = () => {
               {/* Search bar */}
               <div className="max-w-2xl mx-auto relative">
                 <div className="relative flex items-center">
-                  <PiMagicWandLight
-                    className="absolute left-3 text-[#98A2B3]"
-                    size={20}
-                  />
-                  <textarea
-                    value={prompt}
-                    onChange={handlePromptChange}
-                    placeholder="Ask Dexter a question..."
-                    className="w-full h-32 pl-10 pr-12 py-2 border border-[#D0D5DD] rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none overflow-hidden"
-                    maxLength={2000}
-                    disabled={loading}
-                  ></textarea>
-                  <div className="flex items-center space-x-2 absolute right-3 bottom-2 text-[#98A2B3]">
-                    <span className="text-sm">{charCount}/2000</span>
-                    {loading ? (
-                      <ImSpinner8 className="animate-spin text-[#6546F3] w-5 h-5" />
-                    ) : (
-                      <button
-                        onClick={handleSubmit}
-                        disabled={!prompt.trim() || loading}
-                        className="cursor-pointer text-[#6546F3] disabled:opacity-50"
-                      >
-                        <FiSend size={20} />
-                      </button>
-                    )}
-                  </div>
+                  {loading ? (
+                    // Skeleton loader
+                    <div className="w-full h-32 bg-gray-100 rounded-xl animate-pulse"></div>
+                  ) : (
+                    // Text area
+                    <>
+                      <PiMagicWandLight
+                        className="absolute left-3 text-[#98A2B3]"
+                        size={20}
+                      />
+                      <textarea
+                        value={prompt}
+                        onChange={handlePromptChange}
+                        placeholder="Ask Dexter a question..."
+                        className="w-full h-32 pl-10 pr-12 py-2 border border-[#D0D5DD] rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none overflow-hidden"
+                        maxLength={2000}
+                        disabled={loading}
+                      ></textarea>
+                      <div className="flex items-center space-x-2 absolute right-3 bottom-2 text-[#98A2B3]">
+                        <span className="text-sm">{charCount}/2000</span>
+                        <button
+                          onClick={handleSubmit}
+                          disabled={!prompt.trim() || loading}
+                          className="cursor-pointer text-[#6546F3] disabled:opacity-50"
+                        >
+                          <FiSend size={20} />
+                        </button>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 
