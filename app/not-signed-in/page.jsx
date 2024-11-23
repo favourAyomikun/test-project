@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 import { PiMagicWandLight } from "react-icons/pi";
 import { ImSpinner8 } from "react-icons/im";
@@ -8,12 +8,23 @@ import main_logo from "../public/Main_Logo.png";
 import Image from "next/image";
 import NotSignedInSidebar from "../components/NotSignedInSidebar";
 
+const SkeletonLoader = () => {
+  return (
+    <div className="max-w-2xl mx-auto mb-6 animate-pulse">
+      <div className="bg-gray-200 h-6 rounded-md mb-2 w-3/4"></div>
+      <div className="bg-gray-200 h-6 rounded-md mb-2 w-5/6"></div>
+      <div className="bg-gray-200 h-6 rounded-md mb-2 w-2/3"></div>
+    </div>
+  );
+};
+
 const NotSignedInPage = () => {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
   const [charCount, setCharCount] = useState(0);
   const [error, setError] = useState("");
+  const [showSkeleton, setShowSkeleton] = useState(false);
 
   const topics = [
     "Performance and Optimization",
@@ -44,11 +55,12 @@ const NotSignedInPage = () => {
       setError("Please enter a valid prompt.");
       return;
     }
-  
+
     setLoading(true);
+    setShowSkeleton(true); // Show skeleton loader
     setError("");
     setResponse("");
-  
+
     try {
       const res = await fetch(
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCw1mgPnlP7JumtmQykyuj6LsEqASWAgCA",
@@ -70,29 +82,29 @@ const NotSignedInPage = () => {
           }),
         }
       );
-  
+
       if (!res.ok) {
         const errorData = await res.json();
         throw new Error(errorData.error.message || "Failed to fetch response.");
       }
-  
+
       const data = await res.json();
-  
+
       const output =
         data?.candidates?.[0]?.content?.parts?.[0]?.text ||
         "No response available.";
       setResponse(output);
-  
+
       // Clear the text area
       setPrompt("");
       setCharCount(0);
     } catch (err) {
       setError(err.message);
     } finally {
+      setShowSkeleton(false); // Hide skeleton loader
       setLoading(false);
     }
   };
-  
 
   return (
     <div className="bg-[#F8F8F8]">
@@ -100,7 +112,7 @@ const NotSignedInPage = () => {
         <NotSignedInSidebar />
 
         {/* Main content */}
-        <div className="flex-1 justify-center min-h-screen flex flex-col mt-4 md:mt-0">
+        <div className="flex-1 justify-center h-full flex flex-col mt-4 md:mt-0">
           {/* Header */}
           <div className="flex justify-center p-8">
             <div className="text-center">
@@ -115,7 +127,9 @@ const NotSignedInPage = () => {
               <p className="text-sm md:text-base text-[#6B7280] tracking-wide mb-8">
                 Your personal AI-powered SEO specialist
               </p>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">Good day!</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8">
+                Good day!
+              </h1>
 
               {/* Error message */}
               {error && (
@@ -127,7 +141,8 @@ const NotSignedInPage = () => {
               )}
 
               {/* Response area */}
-              {response && (
+              {showSkeleton && <SkeletonLoader />}
+              {!showSkeleton && response && (
                 <div className="max-w-2xl mx-auto mb-6">
                   <div className="bg-white p-4 rounded-xl shadow-lg text-left">
                     <p className="text-gray-700">{response}</p>
