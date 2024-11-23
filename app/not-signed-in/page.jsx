@@ -112,7 +112,7 @@ const NotSignedInPage = () => {
         <NotSignedInSidebar />
 
         {/* Main content */}
-        <div className="flex-1 justify-center h-full flex flex-col mt-4 md:mt-0">
+        <div className="flex-1 justify-center h-full flex flex-col mt-5 md:mt-0">
           {/* Header */}
           <div className="flex justify-center p-8">
             <div className="text-center">
